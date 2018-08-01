@@ -1,0 +1,337 @@
+Started GET "/" for 127.0.0.1 at 2018-08-01 15:00:14 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tiana/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tiana/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 25ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 15:01:37 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tiana/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tiana/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 18ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:04:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/movie"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:10:22 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  Rendered movies/movie.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1652ms (Views: 1651.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:17:02 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  Rendered movies/movie.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:17:04 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  Rendered movies/movie.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:17:38 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  Rendered movies/movie.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All the movies:</h1>
+    2: <% @movies.each do |movie| %>
+    3:     Bienveniue dans notre communauté 
+    4:     <%= movie.title %>! 😇❤️ <br>
+    5:     <%= movie.release_year %>
+  
+app/views/movies/movie.html.erb:2:in `_app_views_movies_movie_html_erb___4520075046753404793_70233868737620'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (130.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (105.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateMovies (20180801121910)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "movies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "release_year" integer, "director" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180801121910_create_movies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180801121910"]]
+  ↳ bin/rails:9
+  [1m[35m (81.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-01 12:19:49.353293"], ["updated_at", "2018-08-01 12:19:49.353293"]]
+  ↳ bin/rails:9
+  [1m[35m (52.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:20:00 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tiana/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  Rendered movies/movie.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All the movies:</h1>
+    2: <% @movies.each do |movie| %>
+    3:     Bienveniue dans notre communauté 
+    4:     <%= movie.title %>! 😇❤️ <br>
+    5:     <%= movie.release_year %>
+  
+app/views/movies/movie.html.erb:2:in `_app_views_movies_movie_html_erb___4520075046753404793_70233958413200'
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:28:30 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (7.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 75ms (Views: 18.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:30:35 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (14.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (48.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "release_year", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Were Soldiers"], ["release_year", 2002], ["director", "Mel Gibson"], ["created_at", "2018-08-01 12:55:27.050609"], ["updated_at", "2018-08-01 12:55:27.050609"]]
+  [1m[35m (101.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:55:36 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 292ms (Views: 221.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:57:49 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:58:13 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 15:58:57 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (12.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "May the Force be with you."], ["director", "Randal Tillman"], ["created_at", "2018-08-01 13:03:12.198926"], ["updated_at", "2018-08-01 13:03:12.198926"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (111.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "I love the smell of napalm in the morning."], ["director", "Emery Reichel"], ["created_at", "2018-08-01 13:03:12.326957"], ["updated_at", "2018-08-01 13:03:12.326957"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (72.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fasten your seatbelts. It's going to be a bumpy night."], ["director", "Nilda Wunsch"], ["created_at", "2018-08-01 13:03:12.402585"], ["updated_at", "2018-08-01 13:03:12.402585"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (53.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["director", "Miss Danial Bashirian"], ["created_at", "2018-08-01 13:03:12.458978"], ["updated_at", "2018-08-01 13:03:12.458978"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["director", "Elisha Champlin"], ["created_at", "2018-08-01 13:03:12.535332"], ["updated_at", "2018-08-01 13:03:12.535332"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (51.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+Started GET "/movie" for 127.0.0.1 at 2018-08-01 16:03:17 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:05:55 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:13:41 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:14:11 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:17:08 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (67.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (118.0ms)
+Completed 200 OK in 732ms (Views: 498.3ms | ActiveRecord: 67.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:17:47 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:18:06 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:2
+  Rendered movies/movie.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:24:29 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:3
+  Rendered movies/movie.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 154ms (Views: 139.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:26:06 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:3
+  Rendered movies/movie.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:28:06 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:3
+  Rendered movies/movie.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 16:28:36 +0300
+Processing by MoviesController#movie as HTML
+  Rendering movies/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/movie.html.erb:3
+  Rendered movies/movie.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (14.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

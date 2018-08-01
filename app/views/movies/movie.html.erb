@@ -1,0 +1,11 @@
+<h1>All the movies:</h1>
+
+<% @movies.each do |movie| %> 
+
+    >Titre du film : <b><%= movie.title %></b> 😇❤️ <br>
+    >Réalisé par <b><%= movie.director %></b> <br>
+    >Sorti en <%= movie.release_year %>
+    <hr />
+
+
+<% end %>
